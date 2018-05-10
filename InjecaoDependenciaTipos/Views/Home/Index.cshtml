@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@inject IScoped scoped
+@inject ITransient transient
+@inject ISingleton singleton
+
+
+<h2>Injeção de Dependencia</h2>
+<h3>Ciclos da View </h3>
+<ul>
+    <li>Scoped: @scoped.Identificador</li>
+    <li>Transient: @transient.Identificador</li>
+    <li>Singleto: @singleton.Identificador</li>
+</ul>
+<h3>Ciclos da Controller </h3>
+<ul>
+    <li>Scoped: @ViewBag.Scoped.Identificador</li>
+    <li>Transient:@ViewBag.Transient.Identificador</li>
+    <li>Singleton: @ViewBag.Singleton.Identificador</li>
+</ul>
